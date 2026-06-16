@@ -1,0 +1,287 @@
+/* --- Core Stylesheet Formatting Reset --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: #27272a;
+  background-color: #fafaf9; /* Warm off-white paper feel */
+  padding-top: 80px; /* Offset spacing to accommodate the fixed navbar block */
+}
+
+/* --- Fixed Top Viewport Navigation Bar (Tests 23 & 25) --- */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(250, 250, 249, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e7e5e4;
+  z-index: 1000;
+}
+
+/* Flexbox Positioning Pattern */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+#header-img {
+  max-height: 40px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+#nav-bar {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #57534e;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #78350f; /* Warm coffee brown brand tone */
+}
+
+/* --- Hero Banner & Capture Form --- */
+#hero {
+  background: radial-gradient(circle at top right, #fef3c7 0%, #fafaf9 80%);
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+#hero h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1c1917;
+  letter-spacing: -0.04em;
+  margin-bottom: 1rem;
+}
+
+#hero p {
+  font-size: 1.15rem;
+  color: #57534e;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Flexbox layout alignment control for the form elements */
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#email {
+  width: 100%;
+  padding: 0.85rem 1.25rem;
+  border: 1px solid #d6d3d1;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease;
+}
+
+#email:focus {
+  border-color: #78350f;
+}
+
+#submit {
+  width: 100%;
+  background-color: #1c1917;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.85rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#submit:hover {
+  background-color: #78350f;
+}
+
+/* --- Features Block Elements --- */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+#features {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.feature-box {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.feature-box .icon {
+  font-size: 2rem;
+  background-color: #f5f5f4;
+  padding: 0.75rem;
+  border-radius: 12px;
+}
+
+.feature-box h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.4rem;
+  color: #1c1917;
+}
+
+.feature-box p {
+  color: #57534e;
+  line-height: 1.6;
+}
+
+/* --- Embedded Iframe Video Constraints --- */
+.video-wrapper {
+  margin-top: 2rem;
+  position: relative;
+  padding-bottom: 56.25%; /* Preserves standard 16:9 cinematic display ratios */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* --- Menu Subscription Cards Grid --- */
+#pricing h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+}
+
+.pricing-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border: 1px solid #e7e5e4;
+  border-radius: 16px;
+  padding: 2.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.product-card.premium {
+  border-color: #d97706; /* Golden warm accent tone */
+  box-shadow: 0 10px 25px rgba(217, 119, 6, 0.05);
+}
+
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #78716c;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1c1917;
+  margin-bottom: 1.5rem;
+}
+
+.product-card ul {
+  list-style-type: none;
+  color: #57534e;
+  line-height: 2;
+  margin-bottom: 2rem;
+}
+
+.select-btn {
+  background-color: #f5f5f4;
+  color: #1c1917;
+  border: none;
+  padding: 0.75rem 2.5rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.product-card.premium .select-btn {
+  background-color: #78350f;
+  color: #ffffff;
+}
+
+.select-btn:hover {
+  opacity: 0.95;
+  transform: scale(1.02);
+}
+
+/* --- Media Query Branch Extensions (Test 24) --- */
+@media (min-width: 640px) {
+  /* Realigns text fields and submit triggers horizontally */
+  #form {
+    flex-direction: row;
+  }
+  
+  #submit {
+    width: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Expands vertical rows outward to standard grid columns side by side */
+  .pricing-grid {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .product-card {
+    width: 48%;
+  }
+}
